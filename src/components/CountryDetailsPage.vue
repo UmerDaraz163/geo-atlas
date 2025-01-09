@@ -38,7 +38,7 @@
           <li><a :href="country?.maps?.openStreetMaps" target="_blank">View on Open Street Maps</a></li>
   
         </ul>
-        <button @click="shwoMore" class="btn my-2">Show {{More}} Details</button>
+        <button @click="shwoMore" class=" my-2 button2" >Show {{More}} Details</button>
       <router-link to="/"><button class="btn btn-primary">Back to Search</button> </router-link>
     </div>
 </template>
@@ -115,5 +115,16 @@ li {
   height: 1px;
   width: 100%;
   background-color: black;
+}
+.button2{
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #007bff;
+  cursor: pointer;
+  color: #007bff;
+}
+.button2:hover{
+  color: white;
+  background-color: #007bff;
 }
 </style>

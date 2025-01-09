@@ -1,13 +1,17 @@
-<template>
+<template >
+  <div class="page"> 
+  <img class="img" src="https://cdn.pixabay.com/photo/2024/12/12/18/32/landscape-9263545_1280.jpg" alt="">
+
   <div class="container">
     <h1>Country Search</h1>
-    <div>
+    <div class="box">
       <input
         v-model="searchQuery"
         placeholder="Enter country name (e.g., Pakistan)"
+        @keydown.enter="fetchCountry"
       />
+    <button class="btn  mx-2 btn-primary button " @click="fetchCountry">Search</button>
     </div>
-    <button class="btn my-2 btn-primary " @click="fetchCountry">Search</button>
     <div v-if="loading">Loading...</div>
     <!-- <div v-if="error" class="error">{{ error }}</div> -->
     <div v-if="countries">
@@ -24,6 +28,7 @@
           <div :class="error">{{ error }}</div>
     </div>
   </div>
+</div>
 </template>
 
 <script setup>
@@ -119,4 +124,33 @@ li {
 .tab-indent {
   margin-left: 16px;
 }
+.box{
+  display: flex;
+  flex-direction: row;
+}
+.page{
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  
+}
+.container{
+  border: 2px solid white;
+  padding: 20px;
+  background-color: white;
+  opacity: 80%;
+  border-radius: 10px;
+}
+
 </style>
