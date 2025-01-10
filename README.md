@@ -25,7 +25,7 @@ GeoAtlas is a simple and interactive web application that allows users to search
 
 ## Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript
+- **Frontend**: Vue.JS, JavaScript, HTML, CSS, Bootstrap
 - **API**: REST Countries API
 - **Hosting**: Netlify
 
